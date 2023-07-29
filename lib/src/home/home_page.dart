@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final _color = ValueNotifier(Colors.white);
-
+  final random = Random();
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
@@ -38,7 +38,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _generateRandomColor() {
-    final random = Random();
     final color = Color.fromRGBO(
       random.nextInt(256),
       random.nextInt(256),
