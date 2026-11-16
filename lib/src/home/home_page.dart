@@ -1,8 +1,9 @@
 import 'dart:math';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// {@template home_page}
+/// {@endtemplate}
 class HomePage extends StatefulWidget {
   /// {@macro home_page}
   const HomePage({super.key});
@@ -21,16 +22,15 @@ class _HomePageState extends State<HomePage> {
       builder: (context, value, child) {
         return Scaffold(
           backgroundColor: _color.value,
-          appBar: AppBar(
-            title: const Text('Flutter Demo Color Generation'),
-          ),
+          appBar: AppBar(title: const Text('Flutter Demo Color Generation')),
           body: InkWell(
             onTap: _generateRandomColor,
             child: Center(
-                child: Text(
-              "Hello World",
-              style: Theme.of(context).textTheme.displayMedium,
-            ),),
+              child: Text(
+                "Hello World",
+                style: Theme.of(context).textTheme.displayMedium,
+              ),
+            ),
           ),
         );
       },
